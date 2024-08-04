@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>YouTube Embed</title>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #player {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="player"></div>
+  <script>
+    function onYouTubeIframeAPIReady()
+    {
+      new YT.Player('player', {
+        height: '100%', // 플레이어 높이 설정
+        width: '100%', // 플레이어 너비 설정
+        videoId: '{{videoId}}', // URL에서 가져온 videoId를 설정
+        playerVars: {
+          autoplay: 1, // 자동 재생 여부
+          showinfo: 0, // Hide the video title
+          controls: 0, // 플레이어 컨트롤러 표시 여부
+          modestbranding: 1, // Hide the Youtube Logo
+          fs: 0, // Hide the full screen button
+          cc_load_policy: 0, // Hide closed captions
+          iv_load_policy: 3, // Hide the Video Annotations
+          autohide: 0, // Hide video controls when playing
+          rel: 0, // Hide related videos at the end
+          loop: 0, // 반복 재생 여부
+        },
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event)
+    {
+      event.target.playVideo();
+    }
+  </script>
+</body>
+
+</html>

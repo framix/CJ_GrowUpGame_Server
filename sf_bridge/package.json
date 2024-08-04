@@ -1,0 +1,22 @@
+{
+  "name": "cj_sugarfarm_bridge_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "ip-range-check": "^0.0.2",
+    "jose": "^5.6.3",
+    "bytenode": "^1.5.6",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "scripts": {
+    "test": "node main.js",
+    "start": "pm2 start main.js --name sf_bridge"
+  },
+  "author": "",
+  "license": "ISC"
+}

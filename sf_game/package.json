@@ -1,0 +1,22 @@
+{
+  "name": "cj_sugarfarm_game_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.0.12",
+    "bytenode": "^1.5.6"
+  },
+  "scripts": {
+    "test": "node main.js",
+    "start": "pm2 start main.js --name sf_game"
+  },
+  "author": "",
+  "license": "ISC"
+}
