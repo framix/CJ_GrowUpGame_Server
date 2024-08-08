@@ -1,4 +1,4 @@
-name: Deploy on src changes
+name: Deploy on sf_bridge changes
 
 on:
   push:
