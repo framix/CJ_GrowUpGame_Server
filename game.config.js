@@ -17,6 +17,7 @@ module.exports = {
       repo: 'git@github.com:framix/CJ_GrowUpGame_Server.git',
       path: '/home/master/CJ_GrowUpGame_Server',
       'post-deploy': 'npm install && pm2 reload game.config.js --env production',
+	  key: '~/.ssh/deploy_key_private'
     }
   }
 };
