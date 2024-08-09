@@ -12,7 +12,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'ec2-user',
-      host: '3.35.70.185',
+      host: '52.78.98.96',
       ref: 'origin/prod',
       repo: 'git@github.com:framix/CJ_GrowUpGame_Server.git',
       path: '/home/master/CJ_GrowUpGame_Server',
