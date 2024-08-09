@@ -60,34 +60,6 @@ app.get('/test', (req, res) =>
 	});
 });
 
-app.get('/youtube_api', (req, res) =>
-{
-	const videoId = req.query.videoId; // 요청으로부터 videoId를 가져옵니다.
-
-	if (!videoId)
-	{
-		return res.status(400).send('videoId is required');
-	}
-
-	// youtube_api.html 파일 경로
-	const htmlFilePath = path.join(__dirname, 'youtube_api.html');
-
-	// HTML 파일 읽기
-	fs.readFile(htmlFilePath, 'utf8', (err, data) =>
-	{
-		if (err)
-		{
-			return res.status(500).send('Error reading HTML file');
-		}
-
-		// HTML 파일에서 {{videoId}}를 videoId로 대체
-		const htmlWithVideoId = data.replace('{{videoId}}', videoId);
-
-		// 클라이언트에 HTML 응답
-		res.send(htmlWithVideoId);
-	});
-});
-
 app.use((req, res) =>
 {
 	res.status(404).send('Not Found');
